@@ -10,7 +10,7 @@ The general outline of all notebooks is as follows:
   * Randomly place the facilities, hospitals, and starting facility of each vehicle (adhering to facility capacity).  
   * For each day, generate a random number of calls given a daily temporal distribution as shown in the graph below. This trend was obseved in several studies [\cite{}] before we additionally obversed it in the Marin dataset [\cite{}] (whose data we use for generation).   
 
-Logo: ![Alt](Resources/calls_graph.png "Daily Call Generation Distribution")
+![Alt](Resources/calls_graph.png "Daily Call Generation Distribution")
 
 * Each call has several characteristics randomly assigned:
   * The arc upon which the call is located, which is uniformly randomly sampled from the graph. Additionally, we randomly select a fractional point along the arc at which the emergency actually takes place (to simulate a street address).  
@@ -19,4 +19,20 @@ Logo: ![Alt](Resources/calls_graph.png "Daily Call Generation Distribution")
   * The number of minutes
   * Emergency demand, i.e. how many of each type of ambulance is requested, is in the form of an integer array (e.g. [1,3,0]). From demand we can implicitly infer call urgency. Demand is set according to a random distribution following urgency data provided by Wellington Free Ambulance [\cite{}] and the Allegheny County (USA) [\cite{}] emergency services, as shown in the following table. The 'Probability' column (2) highlights the final value used in our method. Demand values that share a probability are uniformly sampled.  
 
-Logo: ![Alt](Resources/demand_table.png "Demand Probability Distribution")
+![Alt](Resources/demand_table.png "Demand Probability Distribution")
+
+We have published the following working using these data: 
+
+* Title of fantastic paper #1 [\cite{}]
+* etc
+
+
+If you are to use these data in your own work, please cite us using the following Bibtex entry: 
+
+@misc{maclachlan2022,
+    title={Emergency Medical Services Instance Creation},
+    author={MacLachlan, Jordan and Mei, Yi and Zhang, Fangfang and Zhang, Mengjie},
+    url={https://github.com/maclachlanjj/ems_instance_creation},
+    year={2022}
+}
+
