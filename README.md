@@ -4,6 +4,7 @@ This directory contains the notebook(s) necessary to generate Ambulance Dispatch
 
 The general outline of all notebooks is as follows:
 * Import a baseline graph. This may be the likes of CARP instances (e.g. EGL-G) or a graphical representation of a real-world city from OpenStreetMap.
+ * For CARP or similarly synthetic graphs, if there is not a variety already present, falsely create one by deleting edges defined in the original file.  
 * Determine several Ambulance-specific parameters. e.g. the number of facilities & hospitals, the number of each type of vehicle, etc.
 * Calculate the expected travel time along each arc by assuming a standard traversal speed (e.g. 50kmph).
 * Determine the number of 'days' (instances) you wish to generate. For each day:
